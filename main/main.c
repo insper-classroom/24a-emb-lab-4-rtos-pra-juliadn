@@ -88,7 +88,7 @@ void oled_task(void *p) {
 
             // Limpa o buffer do display
             gfx_clear_buffer(&disp);
-            gfx_draw_string(&disp, 0, 0, 1, "Distancia:");
+            gfx_draw_string(&disp, 0, 0, 1, "Distanciaaa:");
             // Prepara a string para mostrar a distância
             char buffer[16];
             snprintf(buffer, sizeof(buffer), "Dist: %.2f cm", distance_cm);
@@ -137,6 +137,6 @@ int main() {
 
 
     vTaskStartScheduler();
-    return 0;
+    while(true)
+    ;
 
-}
